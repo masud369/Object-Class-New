@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object n class</title>
+</head>
+
+<body>
+
+    <!-- Javascript -->
+    <script>
+        //class
+        class student {
+            constructor(name, roll, year, game) {
+                this.name = name;
+                this.roll = roll;
+                this.year = year;
+                this.game = game;
+            }
+        }
+        function classAlt(name, roll, year, game) {
+            this.name = name;
+            this.roll = roll;
+            this.year = year;
+            this.game = game;
+        }
+        //creating object by using function
+        const firsStudent = new classAlt("Rahul", 9, 2003, "football");
+        console.log(firsStudent);
+        //creating object by using class
+        const scndStudent = new student("Ratul", 9, 2003, "football");
+        console.log(scndStudent);
+
+        //Using extara method in the class
+        class car {
+            constructor(name,year){
+                this.name = name;
+                this.year = year;
+            }
+            age(){
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        const myCar = new car("toyota",2016);
+        console.log(myCar.age());
+
+
+    </script>
+</body>
+
+</html>

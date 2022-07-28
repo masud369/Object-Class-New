@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New keyword</title>
+</head>
+<body>
+    
+<p id="info">showing info</p>
+
+
+    <!-- Javascript  -->
+    <script> 
+        //this in case of object
+        const jobHolder = {
+            Nmae:"Masud Rana",
+            Deginction:"forntend Developer",
+            Salary:12000,
+            inShort:function(){
+                return "Name : "+this.Nmae+", \n"+"Deginection: "+this.Deginction+",\n "+"Salary : "+this.Salary;
+            }
+        } 
+
+        document.getElementById("info").innerText = jobHolder.inShort();
+
+
+        // in case of only this keyword it will return window objcet
+
+        let z = this;
+        console.log(z);
+        //and in strict mode it will return  window object
+        
+
+        //in case of simple function it will return 
+        function defaultFunc(){
+            return this;
+        }
+        console.log(defaultFunc());
+        
+
+        //in case of strict mode in function this will return window object
+        // in case cll(), bind(), apply() this work as by nature
+        
+        //In the case of event it(this) indecats that event
+
+    </script>
+</body>
+</html>
